@@ -24,6 +24,12 @@ class Validator {
       $rules = explode("," , $rule_input);
     }
 
+    //trim whitespace
+    foreach ($rules as $key=>$value)
+    {
+      $rules[$key] = trim($value);
+    }
+
     //check rules
     if(isset($rules))
     {
@@ -77,9 +83,9 @@ class Validator {
         }
         else if(strpos($value, "max:") !== false)
         {
-            $pos = strpos($value, ":");
-            $len = substr($value, $pos+1);
-            $this->addError($value, $this->max($str, $len));
+          $pos = strpos($value, ":");
+          $len = substr($value, $pos+1);
+          $this->addError($value, $this->max($str, $len));
         }
       }
     }
