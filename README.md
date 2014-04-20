@@ -1,7 +1,7 @@
 PHP-Validation
 ==============
 
-A PHP Validation Class using Object Oriented Programming (OOP)
+A fully encapsulated OOP Validation Class made with PHP
 
 How to use
 ----------
