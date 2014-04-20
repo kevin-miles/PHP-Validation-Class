@@ -12,6 +12,9 @@ How to use
 
 
 __Warning:__ Ensure rules do not have spaces between commas.
+
 $validate->validate("abcdefg", "r,min:3,max:6,n,a") will __work__.
+
 $validate->validate("abcdefg", "r, min:3, max:6, n, a") will __not work__ because of the spaces.
+
 _This will be changed in the future when a trim filter is added_
